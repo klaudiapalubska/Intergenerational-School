@@ -1,0 +1,76 @@
+.details-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 30vh;
+  z-index: 3;
+  background-color: white;
+  opacity: 1;
+  border-radius: 1.875rem;
+  @include responsive($correct-2-breakpoint) {
+    width: 50%;
+  }
+
+  &__header {
+    width: 100%;
+    height: 15%;
+    background-color: $accent-color;
+    border-top-right-radius: 1.875rem;
+    border-top-left-radius: 1.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__text {
+    width: 80%;
+    margin-left: 35%;
+  }
+  &__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $text-color;
+    opacity: 0.6;
+    z-index: 2;
+  }
+
+  &__describe {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+    padding-top: 5%;
+    padding-left: 5%;
+    & span {
+      width: 100%;
+      height: 3rem;
+    }
+  }
+
+  &__cancel {
+    background-color: $button-close-color;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0.75rem;
+    &__img {
+      width: 2rem;
+      height: 2rem;
+    }
+    &:hover {
+      background-color: $button-close-hover;
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(1.5);
+    }
+  }
+}

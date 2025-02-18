@@ -1,0 +1,29 @@
+.panel {
+  width: 90%;
+  @include responsive($correct-2-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__lesson {
+    width: 80%;
+    height: 2rem;
+    margin: $small-margin;
+    margin-left: $margin;
+    background-color: $accent-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.875rem;
+
+    &:hover {
+      background-color: $accent-color-hover;
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(1.2);
+    }
+  }
+}

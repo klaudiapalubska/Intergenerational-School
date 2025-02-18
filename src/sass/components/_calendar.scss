@@ -1,0 +1,52 @@
+.calendar {
+  margin: $margin;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(10vw, 19.97rem));
+  grid-template-rows: 3rem repeat(6, minmax(10vh, 3fr));
+  gap: 1vw;
+
+  &__item {
+    background-color: $calendar-color;
+    color: $base-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: bold;
+    border-radius: 3px;
+    height: clamp(5vh, 100%, 11.26rem);
+    max-width: 19.97rem;
+    width: 100%;
+    @include responsive($correct-2-breakpoint) {
+      position: relative;
+    }
+
+    &.calendar__day {
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      padding: $margin-medium;
+      box-sizing: border-box;
+      height: 11.26rem;
+      min-height: 11.26rem;
+      max-height: 11.26rem;
+      @include responsive($correct-2-breakpoint) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      &--empty {
+        background-color: $base-color;
+      }
+    }
+  }
+
+  &__header {
+    background-color: $calendar-color-nav;
+  }
+}

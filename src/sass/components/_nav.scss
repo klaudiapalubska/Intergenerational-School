@@ -1,0 +1,10 @@
+.nav {
+  background-color: $primary-color;
+  height: 2rem;
+  padding: $margin;
+  &__title {
+    @include responsive($first-breakpoint) {
+      text-align: center;
+    }
+  }
+}
